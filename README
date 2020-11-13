@@ -1,0 +1,45 @@
+# SAKBARI-CITY-BIKES
+
+Application
+The application is run using the Maven java plugin.
+
+I tested this feature in two way. Manual way to check how is API end point work for this feature.
+I tested in postman to get response. I created postman folder and dump the all data
+
+Cucumber tests
+You can run the cucumber tests suite in your IDE by launching CucumberRunner.java class as a junit test with below JVM options
+-ea
+
+
+
+Automation Scenario testing with BDD Cucumber (stepIntegeration) and Junit with Cucumber runner
+I wrote 3 scenario in getBikeLocations.feaure file
+
+Scenario 1 This scenario indicates for globe. 
+How can i find out city bikes location.  So what i did, i used network parameter to send a request to get city bikes location.if is  successful i will get response  200
+
+Scenario 2 This scenario indicates  for specific city location. To get bike locations for specified city. 
+I used specified city as a Network_id. So i used Visa-Frankfurt as network_id to get successful response  200
+
+Scenario 3 This scenario indicates for city Frankfurt in Germany (Note: Acronym DE as define Deutschland). First i need to get city bikes location. 
+Then i passed parameter as a network_id to pass query string parameters in GET url using Rest Assured. 
+I can pass them as a Queryparameter to get  Latitude and Longitude field.
+
+
+
+Utils
+Utility API endpoints  to enable provided link 
+API End points here  http://api.citybik.es/v2/networks  (Scenario 1)
+                     http://api.citybik.es/v2/networks/network_id  (Scenario 2)
+                     http://api.citybik.es/v2/networks/visa-frankfurt?fields=id,location,city (Scenario 3)
+  HTTP Method: GET
+  response:200
+                             
+Dependencies
+To run cucumber i downloaded latest dependencies in pom.xml file which are belows
+io.cucumber:cucumber-junit:6.8.2
+io.cucumber:cucumber-java:6.8.2
+io.rest-assured:rest-assured:4.3.2
+io.cucumber:cucumber-core:6.8.2
+
+Imports Plugins and add in StepDefinitions class
