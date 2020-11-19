@@ -10,5 +10,5 @@ import org.junit.runner.RunWith;
         ,glue={"com.citybikes.stepIntegeration"}
 )
 
-public class cucumberRunner {
+public class CucumberRunnerTest {
 }
